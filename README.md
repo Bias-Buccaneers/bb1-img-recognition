@@ -25,10 +25,10 @@ But wait, there’s more! For overachievers, there is a second USD 4,000 extra c
 ## Grading Criteria
 When you’re ready to submit, you can run the submission code that sends us your code and results. Your score is based on:
 
-* Accuracy of the tagging model for each demographic set
-* Disparity in classification accuracy across different subgroups within each demographic set
+* Accuracy of the tagging model for each demographic attribute
+* Disparity in classification accuracy across different classes within each demographic attribute
 * Randomness in tags given to the ‘noisy’ ImageNet samples 
-* Efficiency of code, measured as how long the code takes to run
+* Efficiency of code, measured as how long it takes the code to produce predictions
 
 ## Scoring Rubric
 
