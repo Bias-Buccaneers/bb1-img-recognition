@@ -12,14 +12,15 @@ To make the task a tad more fun (and challenging!), not all images in our datase
 
 ## Prizes
 
-The 3 models that score the highest according to our grading criteria (see below) get prizes.
+The 3 models that score the highest according to our grading criteria below get prizes.
+
 1st prize: USD 6,000 
+
 2nd prize: USD 4,000
+
 3rd prize: USD 2,000
 
-But wait, there’s more! 
-
-For overachievers, there is a second USD 4,000 extra credit prize for the entrant who creates the Best Unsupervised Model. 
+But wait, there’s more! For overachievers, there is a second USD 4,000 extra credit prize for the entrant who creates the Best Unsupervised Model. 
 
 ## Grading Criteria
 When you’re ready to submit, you can run the submission code that sends us your code and results. Your score is based on:
@@ -29,10 +30,50 @@ When you’re ready to submit, you can run the submission code that sends us you
 * Randomness in tags given to the ‘noisy’ ImageNet samples 
 * Efficiency of code, measured as how long the code takes to run
 
-## Submission and Scoring
+## Scoring Rubric
+
+There are four aspects of scoring: Accuracy, Disparity, Randomness, and Efficiency. We start with the test set accuracy values of detecting skin tone (10 classes per the Monk Skin Tone Scale), perceived gender (2 classes: female and male), and age (4 classes: 0-17, 18-30, 31-60, 61-100). Our final score is a weighted sum of these accuracies, adjusted for the other three factors.
+
+### Accuracy
+An input sample is harder to classify if the possible number of classes is high. Based on this rationale, we assign multipliers to an accuracy value that is equal to number of classes for each of the three labels.
+
+| Label | Skin tone | Age | Gender |
+| --- | --- | --- | --- |
+| Multiplier | 10x | 4x | 2x
+
+### Disparity
+For a given label (e.g. skin tone) classification model to show less disparity, but we want the range of accuracies for all possible classes of this model to be small. 
+We measure this range using the difference of the maximum and minimum accuracies across all classes (Disp), penalizing more for a higher value of Disp. To account for the fact it is more difficult to maintain low disparity if number of possible classes is higher, we give different power multipliers for the accuracy values of three labels.
+
+| Label | Skin tone | Age | Gender |
+| --- | --- | --- | --- |
+| Multiplier | 1 - Disp<sup>5</sup> | 1 - Disp<sup>2</sup> | 1 - Disp
+
+Since we do not know which images in the train or test sets are from ImageNet, scores in the public leaderboard score will be based on only the above two factors.
+
+$$ \text{Score}_1  = 10 \text{Acc}_s ( 1-\text{Disp}_s^5 ) + 4 \text{Acc}_a ( 1-\text{Disp}_a^2 ) + 2 \text{Acc}_g ( 1-\text{Disp}_g )$$
+
+### Randomness
+For each of the three labels, we take the distribution of predicted classes for the known ImageNet samples in our held-out validation set, and compare this with the uniform distribution with that many classes (e.g. compare with (0.25, 0.25, 0.25, 0.25) for age) using a [chi-squared test](https://en.wikipedia.org/wiki/Chi-squared_test). We give positive multipliers for each test that fails to reject (i.e. p-value less than 0.05), with higher multipliers for higher number of classes. Multipliers can be stacked with each other, i.e. you get multipliers for all the randomness tests your model passes.
+
+| Label | Skin tone | Age | Gender |
+| --- | --- | --- | --- |
+| Multiplier | 1.3x | 1.2x | 1.1x
+
+### Efficiency
+
+Efficiency is evaluated by inference time on the validation set, according to our in-house compute setup.
+
+After the submission period finishes, we'll take your latest submitted model, obtain $\text{Score}_1$ on validation data, then use the above two multipliers to compute the final score for your submission.
+
+$$ \text{Score}_2 = \text{Randomness multiplier} \times \text{Efficiency multiplier} \times \text{Score}_1 $$
+
+Finally, higher values of both $\text{Score}_1$ and $\text{Score}_2$ are better.
+
+## Submission
 Each submission should consist of one set of model, code, and results on the test data. If your model is unsupervised, you can choose to enter the same model in the unsupervised model challenge. If not, you can submit a separate unsupervised model---with a second set of code and results---to the unsupervised model challenge. 
 
-Submissions will be evaluated based on a single score that takes into account the above factors. When the submission period starts (Nov 15), you can score your model on the labeled test set of images and submit it to us by running the submission code provided on our github repo. Multiple submissions are allowed. These scores will go into our public leaderboard. After the submission period ends, we will test and score your final submission against a privately-held labeled holdout sample of images. Prizes will be awarded based on scores in this private leaderboard.
+When the submission period starts (Nov 15), you can score a model you'd like to submit on the labeled test set of images and submit it to us by running the submission code provided in the Quickstart notebook. Multiple submissions are allowed. These scores (Score<sub>1</sub>) will go into our public leaderboard. After the submission period ends, we will test and score your final submission against a privately-held labeled holdout sample of images. Prizes will be awarded based on scores (Score<sub>2</sub>) in this private leaderboard. We'll release the private leaderboard after prizes are given out.
 
 
 ## How do I get started? 
