@@ -14,13 +14,13 @@ To make the task a tad more fun (and challenging!), not all images in our datase
 
 The 3 models that score the highest according to our grading criteria below get prizes.
 
-1st prize: USD 6,000 
+1st prize: $6,000 USD 
 
-2nd prize: USD 4,000
+2nd prize: $4,000 USD
 
-3rd prize: USD 2,000
+3rd prize: $2,000 USD
 
-But wait, there’s more! For overachievers, there is a second USD 4,000 extra credit prize for the entrant who creates the Best Unsupervised Model. 
+But wait, there’s more! For overachievers, there is a second $4,000 USD extra credit prize for the entrant who creates the Best Unsupervised Model. 
 
 ## Grading Criteria
 When you’re ready to submit, you can run the submission code that sends us your code and results. Your score is based on:
@@ -62,7 +62,11 @@ For each of the three labels, we take the distribution of predicted classes for 
 
 ### Efficiency
 
-Efficiency is evaluated by inference time on the validation set, according to our in-house compute setup.
+Efficiency is evaluated by inference time on the validation set, according to our in-house compute setup. Your _Eficiency multiplier_ will be based on the percentile your best score belongs in when compared to best submissions from all participants.
+
+| Percentile | Top 10% | 15%-25% | Rest |
+| --- | --- | --- | --- |
+| Multiplier | 1.2x | 1.1x | 1x
 
 After the submission period finishes, we'll take your latest submitted model, obtain $\text{Score}_1$ on validation data, then use the above two multipliers to compute the final score for your submission.
 
@@ -71,14 +75,15 @@ $$ \text{Score}_2 = \text{Randomness multiplier} \times \text{Efficiency multipl
 Finally, higher values of both $\text{Score}_1$ and $\text{Score}_2$ are better.
 
 ## Submission
-Each submission should consist of one set of model, code, and results on the test data. If your model is unsupervised, you can choose to enter the same model in the unsupervised model challenge. If not, you can submit a separate unsupervised model---with a second set of code and results---to the unsupervised model challenge. 
+Each submission should be in the form of a GitHub repository, and consist of one set of model, code, and results on the test data. If your model is unsupervised, you can choose to enter the same model in the unsupervised model challenge. If not, you can submit a separate unsupervised model---with a second set of code and results---to the unsupervised model challenge. 
 
 When the submission period starts (Nov 15), you can score a model you'd like to submit on the labeled test set of images and submit it to us by running the submission code provided in the Quickstart notebook. Multiple submissions are allowed. These scores (Score<sub>1</sub>) will go into our public leaderboard. After the submission period ends, we will test and score your final submission against a privately-held labeled holdout sample of images. Prizes will be awarded based on scores (Score<sub>2</sub>) in this private leaderboard. We'll release the private leaderboard after prizes are given out.
 
+You retain all rights to your work and code in your submissions, including the choice of license, what you decide to do with it after the challenge closes, and whether it's a public or private repository. If it's private, we only ask you provide access to our [admin](https://github.com/shubhobm) during the duration of the challenge.
 
 ## How do I get started? 
 To sign up, visit us at https://biasbounty.ai/8-bbb. Once you register as a crew, you'll be given access to the train and test datasets. The notebook in this reponsitory provides a starting point for working with this data.
 
-Each entrant will have the opportunity to sign up for USD 5,000 of free AWS credit to complete the challenge. (Special thanks to our awesome partners at Amazon!) Once you enter, you will receive the password to access our challenge data. 
+Each entrant will have the opportunity to sign up for $5,000 USD of free AWS credit to complete the challenge. (Special thanks to our awesome partners at Amazon!) Once you enter, you will receive the password to access our challenge data. 
 
 We will also be hosting periodic competitions throughout the month for fun items, like Kindles! If you are entering as a group, please let us know if you want to receive our Mutiny in a Box event bundle!
