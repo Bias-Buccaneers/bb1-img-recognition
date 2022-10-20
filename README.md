@@ -79,11 +79,13 @@ Each submission should be in the form of a GitHub repository, and consist of one
 
 When the submission period starts (Nov 15), you can score a model you'd like to submit on the labeled test set of images and submit it to us by running the submission code provided in the Quickstart notebook. Multiple submissions are allowed. These scores (Score<sub>1</sub>) will go into our public leaderboard. After the submission period ends, we will test and score your final submission against a privately-held labeled holdout sample of images. Prizes will be awarded based on scores (Score<sub>2</sub>) in this private leaderboard. We'll release the private leaderboard after prizes are given out.
 
-You retain all rights to your work and code in your submissions, including the choice of license, what you decide to do with it after the challenge closes, and whether it's a public or private repository. If it's private, we only ask you provide access to our [admin](https://github.com/shubhobm) during the duration of the challenge.
-
 ## How do I get started? 
 To sign up, visit us at https://biasbounty.ai/8-bbb. Once you register as a crew, you'll be given access to the train and test datasets. The notebook in this reponsitory provides a starting point for working with this data.
 
 Each entrant will have the opportunity to sign up for $5,000 USD of free AWS credit to complete the challenge. (Special thanks to our awesome partners at Amazon!) Once you enter, you will receive the password to access our challenge data. 
 
 We will also be hosting periodic competitions throughout the month for fun items, like Kindles! If you are entering as a group, please let us know if you want to receive our Mutiny in a Box event bundle!
+
+## What happens to my submission after the competition closes?
+
+That’s entirely up to you. You retain full rights to your submission, including the choice of license, a public or private repository, and rights to its future use.  If it's private, we only ask you provide access to our [admin](https://github.com/shubhobm) during the duration of the challenge. If you’re interested in working with the Bias Buccaneers team to take the next steps with a winning submission, let’s talk!
