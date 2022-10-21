@@ -20,7 +20,9 @@ The 3 models that score the highest according to our grading criteria below get 
 
 3rd prize: $2,000 USD
 
-But wait, there’s more! For overachievers, there is a second $4,000 USD extra credit prize for the entrant who creates the Best Unsupervised Model. 
+But wait, there’s more! For overachievers, there is a second $4,000 USD extra credit prize for the entrant who creates the **Best Unsupervised Model**.
+
+Besides these, we'll announce fun competitions periodically, with swags and goodies up for grabs. Follow our Twitter handle [@BiasBounty](https://twitter.com/BiasBounty) to keep an eye out for those!
 
 ## Grading Criteria
 When you’re ready to submit, you can run the submission code that sends us your code and results. Your score is based on:
@@ -28,7 +30,7 @@ When you’re ready to submit, you can run the submission code that sends us you
 * Accuracy of the tagging model for each demographic attribute
 * Disparity in classification accuracy across different classes within each demographic attribute
 * Randomness in tags given to the ‘noisy’ ImageNet samples 
-* Efficiency of code, measured as how long it takes the code to produce predictions
+* Efficiency of code, measured as how long it takes for the code to produce predictions
 
 ## Scoring Rubric
 
