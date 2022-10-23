@@ -66,7 +66,7 @@ For each of the three labels, we take the distribution of predicted classes for 
 
 Efficiency is evaluated by inference time on the validation set, according to our in-house compute setup. Your _Eficiency multiplier_ will be based on the percentile your best score belongs in when compared to best submissions from all participants.
 
-| Percentile | Top 10% | 15%-25% | Rest |
+| Percentile | Top 10% | 10%-25% | Rest |
 | --- | --- | --- | --- |
 | Multiplier | 1.2x | 1.1x | 1x
 
