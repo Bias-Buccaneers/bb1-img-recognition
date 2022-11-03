@@ -47,7 +47,7 @@ The dataset contains a total of 12,283 images of human faces. The ImageNet sampl
 
 ### Does the dataset contain all possible instances or is it a sample (not necessarily random) of instances from a larger set?
 
-The dataset contains a randomized sample of images of human faces. The dataset is a subset of a larger set of open-sourced images from www.unsplash.com 
+The dataset contains a randomized sample of images of human faces. The dataset is a subset of a larger set of open-sourced images from [Unsplash](www.unsplash.com).
 
 ### If the dataset is a sample, then what is the larger set? Is the sample representative of the larger set (e.g., geographic coverage)? If so, please describe how this representativeness was validated/verified. If it is not representative of the larger set, please describe why not (e.g., to cover a more diverse range of instances, because instances were withheld or unavailable).
 
@@ -58,11 +58,13 @@ The ImageNet samples are obtained as random samples from the larger ImageNet dat
 ### What data does each instance consist of?
 “Raw” data (e.g., unprocessed text or images) or features? In either case, please provide a description.
 
-Each instance contains an image processed by www.unsplash.com, and further cropped by Bias Buccaneers. 
+Each instance contains an image processed by [Unsplash](www.unsplash.com), and further cropped by Bias Buccaneers. 
 
 ### Is there a label or target associated with each instance? If so, please provide a description.
 
-Each instance has been annotated for approximate gender, age range, and skin tone following generalized best practices (Eg. We chose to avoid "race" and instead used "skin tone" following the Monk Skin Tone scale).
+Each instance has been annotated for approximate gender, age range, and skin tone following generalized best practices (Eg. We chose to avoid "race" and instead used "skin tone" following the [Monk Skin Tone scale](https://blog.google/products/search/monk-skin-tone-scale/)).
+
+Over the course of 8 days, 10 human annotators completed tagging on the data set, with transparent instructions across each annotation type (including examples of Monk skin tone scale). 100% of the dataset was further reviewed by a second annotator. To further reduce potential errors, images that produced conflicting annotations by reviewers were set aside.
 
 ### Is any information missing from individual instances? If so, please provide a description, explaining why this information is missing (e.g., because it was unavailable). This does not include intentionally removed information, but might include, e.g., redacted text.
 
@@ -134,7 +136,7 @@ The annotations were indirectly inferred; the annotations were not validated or 
 
 ### What mechanisms or procedures were used to collect the data (e.g., hardware apparatus or sensor, manual human curation, software program, software API)? How were these mechanisms or procedures validated?
 
-The dataset contains a randomized sample of images of human faces. The dataset is a subset of a larger set of open-sourced images from www.unsplash.com. Standard internet download as used to collect the images from the public website.
+The dataset contains a randomized sample of images of human faces. The dataset is a subset of a larger set of open-sourced images from [Unsplash](www.unsplash.com). Standard internet download as used to collect the images from the public website.
 
 ### If the dataset is a sample from a larger set, what was the sampling strategy (e.g., deterministic, probabilistic with specific sampling probabilities)?
 
@@ -150,7 +152,7 @@ Data waere collected during the month of October 2022.
 
 ### Does this timeframe match the creation timeframe of the data associated with the instances (e.g. recent crawl of old news articles)? If not, please describe the timeframe in which the data associated with the instances was created.
 
-Information was limited to what was provided via open-source license from www.unsplash.com which does not include any information on the original image creation date.
+Information was limited to what was provided via open-source license from [Unsplash](www.unsplash.com) which does not include any information on the original image creation date.
 
 ### Were any ethical review processes conducted (e.g., by an institutional review board)? If so, please provide a description of these review processes, including the outcomes, as well as a link or other access point to any supporting documentation.
 
@@ -158,7 +160,7 @@ There is no IRB process for this form of data. Please review unsplash privacy po
 
 ### Does the dataset relate to people? If not, you may skip the remainder of the questions in this section.
 
-Yes; The dataset is limited to images of human faces that have been verified as open-source by www.unsplash.com.
+Yes; The dataset is limited to images of human faces that have been verified as open-source by [Unsplash](www.unsplash.com).
 
 ### Did you collect the data from the individuals in question directly, or obtain it via third parties or other sources (e.g., websites)?
 
@@ -194,7 +196,7 @@ The questions in this section are intended to provide dataset consumers with the
 
 ### Was any preprocessing/cleaning/labeling of the data done (e.g., discretization or bucketing, tokenization, part-of-speech tagging, SIFT feature extraction, removal of instances, processing of missing values)?
 
-Each instance contains an image processed by www.unsplash.com, and further cropped and annotated by Bias Buccaneers. 
+Each instance contains an image processed by [Unsplash](www.unsplash.com), and further cropped and annotated by Bias Buccaneers. 
 
 ### If so, please provide a description. If not, you may skip the remainder of the questions in this section.
 
@@ -245,8 +247,9 @@ Yes, the creators of this dataset do not want this dataset to be used to identif
 N/A
 
 ## Distribution
-Will the dataset be distributed to third parties outside of the entity (e.g., company, institution, organization) on behalf of which the dataset was created?
-If so, please provide a description.
+
+### Will the dataset be distributed to third parties outside of the entity (e.g., company, institution, organization) on behalf of which the dataset was created?
+#### If so, please provide a description.
 
 The dataset will be distributed to participants in our first bounty during the course of this challenge (Oct 20-Nov 30, 2022). After this date access will be closed.
 
@@ -278,7 +281,7 @@ N/A
 
 ### Have any third parties imposed IP-based or other restrictions on the data associated with the instances? If so, please describe these restrictions, and provide a link or other access point to, or otherwise reproduce, any relevant licensing terms, as well as any fees associated with these restrictions.
 
-No; The dataset is limited to images of human faces that have been verified as open-source by www.unsplash.com.
+No; The dataset is limited to images of human faces that have been verified as open-source by [Unsplash](www.unsplash.com).
 
 
 ### Do any export controls or other regulatory restrictions apply to the dataset or to individual instances? If so, please describe these restrictions, and provide a link or other access point to, or otherwise reproduce, any supporting documentation.
@@ -305,21 +308,17 @@ Please e-mail us at: info@biasbounty.ai
 If so, please provide a link or other access point.
 
 ### Will the dataset be updated (e.g., to correct labeling errors, add new instances, delete instances)?
+#### If so, please describe how often, by whom, and how updates will be communicated to users (e.g., mailing list, GitHub)?
 
 The dataset was created for the Bias Bounty competition taking place during the month of November 2022. There is no intention to update this dataset at this time.
 
-### If so, please describe how often, by whom, and how updates will be communicated to users (e.g., mailing list, GitHub)?
-
-N/A
-
 ### If the dataset relates to people, are there applicable limits on the retention of the data associated with the instances (e.g., were individuals in question told that their data would be retained for a fixed period of time and then deleted)?
-If so, please describe these limits and explain how they will be enforced.
+#### If so, please describe these limits and explain how they will be enforced.
 
 The dataset is limited to images of human faces that have been verified as open-source by [Unsplash](www.unsplash.com). Unsplash abides by GDPR.
 
 ### Will older versions of the dataset continue to be supported/hosted/maintained?
-
-If so, please describe how. If not, please describe how its obsolescence will be communicated to users.
+#### If so, please describe how. If not, please describe how its obsolescence will be communicated to users.
 
 N/A
 
