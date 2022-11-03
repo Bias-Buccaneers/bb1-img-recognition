@@ -1,5 +1,22 @@
 # Bias Buccaneers Image Recognition Challenge: Datasheet
 
+<a id="top"></a>
+
+## Contents
+
+[Motivation](#motivation)
+
+[Composition](#composition)
+
+[Collection Process](#collection-process)
+
+[Preprocessing](#preproc)
+
+[Uses](#uses)
+
+[Distribution](#distribution)
+
+[Maintenance](#maintenance)
 
 ## Motivation
 
@@ -27,7 +44,9 @@ The creation of the dataset annotations was funded by Bias Buccaneers.
 ### Any other comments?
 This dataset is drawn from multiple sources, including synthetic data, human face images from Unsplash.com and cropped by Bias Buccaneers, and ‘noise’ data from Image Net. This dataset was later tagged by Bias Buccaneers. 
 
-Unless otherwise specified, by ‘dataset’ we refer to the data used for the Bias Bounty competition. We specify the sampling and labeling mechanism of the ImageNet samples at respective places, and direct the reader to the ImageNet website for more information. Similarly, many of the legal and ethical use requirements are assumed in good faith from material on www.unsplash.com 
+Unless otherwise specified, by ‘dataset’ we refer to the data used for the Bias Bounty competition. We specify the sampling and labeling mechanism of the ImageNet samples at respective places, and direct the reader to the ImageNet website for more information. Similarly, many of the legal and ethical use requirements are assumed in good faith from material on www.unsplash.com
+
+[back to top](#top)
 
 ## Composition
 
@@ -121,6 +140,8 @@ Each image has been annotated for approximate sex, age range, and skin tone foll
 
 N/A
 
+[back to top](#top)
+
 ## Collection process
 
 The answers to questions here may provide information that allow others to reconstruct the dataset without access to it.
@@ -191,7 +212,9 @@ There has not been a formal analysis of impact of use on data subjects. However,
 
 N/A
 
-## Preprocessing/cleaning/labeling
+[back to top](#top)
+
+## <a id="preproc"></a> Preprocessing/cleaning/labeling
 The questions in this section are intended to provide dataset consumers with the information they need to determine whether the “raw” data has been processed in ways that are compatible with their chosen tasks. For example, text that has been converted into a “bag-of-words” is not suitable for tasks involving word order.
 
 ### Was any preprocessing/cleaning/labeling of the data done (e.g., discretization or bucketing, tokenization, part-of-speech tagging, SIFT feature extraction, removal of instances, processing of missing values)?
@@ -213,6 +236,8 @@ No.
 ### Any other comments?
 
 N/A 
+
+[back to top](#top)
 
 ## Uses
 These questions are intended to encourage dataset creators to reflect on the tasks for which the dataset should and should not be used. By explicitly highlighting these tasks, dataset creators can help dataset consumers to make informed decisions, thereby avoiding potential risks or harms.
@@ -245,6 +270,8 @@ Yes, the creators of this dataset do not want this dataset to be used to identif
 ### Any other comments?
 
 N/A
+
+[back to top](#top)
 
 ## Distribution
 
@@ -329,3 +356,5 @@ No, as this data will not be available for public use beyond the bias bounty.
 ### Any other comments?
 
 N/A
+
+[back to top](#top)
