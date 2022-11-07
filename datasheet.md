@@ -83,7 +83,7 @@ Each instance contains an image processed by [Unsplash](www.unsplash.com), and f
 
 Each instance has been annotated for approximate gender, age range, and skin tone following generalized best practices (Eg. We chose to avoid "race" and instead used "skin tone" following the [Monk Skin Tone scale](https://blog.google/products/search/monk-skin-tone-scale/)).
 
-Over the course of 8 days, 10 human annotators completed tagging on the data set, with transparent instructions across each annotation type (including examples of Monk skin tone scale). 100% of the dataset was further reviewed by a second annotator. To further reduce potential errors, images that produced conflicting annotations by reviewers were set aside.
+Over the course of two weeks, 10 human annotators completed tagging on the data set, with transparent instructions across each annotation type (including examples of Monk skin tone scale). 100% of the dataset was further reviewed by a second annotator. To further reduce potential errors, images that produced conflicting annotations by reviewers were set aside. As a third and final step, the Technical Program Manager in charge of the auditing process by reviewing a 2.5% random sample of labels to ensure quality of final annotations.
 
 ### Is any information missing from individual instances? If so, please provide a description, explaining why this information is missing (e.g., because it was unavailable). This does not include intentionally removed information, but might include, e.g., redacted text.
 
